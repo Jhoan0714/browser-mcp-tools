@@ -7,7 +7,7 @@ import { BrowserRecorder } from '../../src/recorder.js';
 
 test('records a headless browser session to mp4', async (t) => {
   const recorder = new BrowserRecorder();
-  const outputPath = join(tmpdir(), `mcp-browser-tools-test-${Date.now()}.mp4`);
+  const outputPath = join(tmpdir(), `browser-mcp-tools-test-${Date.now()}.mp4`);
 
   t.after(async () => {
     await recorder.close();

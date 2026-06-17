@@ -7,7 +7,7 @@ import { BrowserRecorder } from '../../src/recorder.js';
 
 test('takeFullScreenshot saves a full-page PNG on desktop', async (t) => {
   const recorder = new BrowserRecorder();
-  const outputPath = join(tmpdir(), `mcp-browser-tools-screenshot-${Date.now()}.png`);
+  const outputPath = join(tmpdir(), `browser-mcp-tools-screenshot-${Date.now()}.png`);
 
   t.after(async () => {
     await recorder.close();
@@ -28,7 +28,7 @@ test('takeFullScreenshot saves a full-page PNG on desktop', async (t) => {
 
 test('takeFullScreenshot respects persistent device emulation', async (t) => {
   const recorder = new BrowserRecorder();
-  const outputPath = join(tmpdir(), `mcp-browser-tools-mobile-${Date.now()}.png`);
+  const outputPath = join(tmpdir(), `browser-mcp-tools-mobile-${Date.now()}.png`);
 
   t.after(async () => {
     await recorder.close();

@@ -1,5 +1,5 @@
 {
-  "name": "mcp-browser-tools",
+  "name": "browser-mcp-tools",
   "version": "0.2.0",
   "description": "MCP server for Chrome and Edge: CDP screen recording, full-page screenshots, and device emulation",
   "author": "jhoanlopez",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhoanlopez/mcp-browser-tools.git"
+    "url": "https://github.com/jhoanlopez/browser-mcp-tools.git"
   },
-  "homepage": "https://github.com/jhoanlopez/mcp-browser-tools#readme",
+  "homepage": "https://github.com/jhoanlopez/browser-mcp-tools#readme",
   "bugs": {
-    "url": "https://github.com/jhoanlopez/mcp-browser-tools/issues"
+    "url": "https://github.com/jhoanlopez/browser-mcp-tools/issues"
   },
   "files": [
     "src",
@@ -31,7 +31,7 @@
     "./devices": "./src/devices.js"
   },
   "bin": {
-    "mcp-browser-tools": "./src/server.js"
+    "browser-mcp-tools": "./src/server.js"
   },
   "scripts": {
     "start": "node src/server.js",
@@ -45,7 +45,7 @@
     "test:integration": "node --test test/integration/*.test.js",
     "test:all": "node --test test/unit/*.test.js test/integration/*.test.js",
     "test:watch": "node --test --watch test/unit/*.test.js",
-    "prepare": "husky"
+    "prepare": "node -e \"try{require('husky')}catch{process.exit(0)}\" && husky"
   },
   "keywords": [
     "mcp",

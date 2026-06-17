@@ -194,7 +194,7 @@ export class BrowserRecorder {
     }
 
     const executable = browserPath ?? chromePath ?? (await detectBrowserPath(browser));
-    const profileDir = userDataDir ?? join(tmpdir(), `mcp-browser-tools-profile-${Date.now()}`);
+    const profileDir = userDataDir ?? join(tmpdir(), `browser-mcp-tools-profile-${Date.now()}`);
     const args = [
       `--remote-debugging-port=${debugPort}`,
       '--remote-allow-origins=*',
@@ -298,7 +298,7 @@ export class BrowserRecorder {
       throw new Error('Recording stopped but no frames were captured');
     }
 
-    const videoPath = outputPath ?? join(tmpdir(), `mcp-browser-tools-${Date.now()}.mp4`);
+    const videoPath = outputPath ?? join(tmpdir(), `browser-mcp-tools-${Date.now()}.mp4`);
     const encodeOptions = {
       framesDir: this.#framesDir,
       outputPath: videoPath,
@@ -372,7 +372,7 @@ export class BrowserRecorder {
     const buffer = await captureFullPage(this.#client, { format, quality });
     const ext = format === 'jpeg' ? 'jpg' : 'png';
     const filePath =
-      outputPath ?? join(tmpdir(), `mcp-browser-tools-screenshot-${Date.now()}.${ext}`);
+      outputPath ?? join(tmpdir(), `browser-mcp-tools-screenshot-${Date.now()}.${ext}`);
     await writeFile(filePath, buffer);
 
     const result = {
@@ -538,7 +538,7 @@ export class BrowserRecorder {
 async function mkFramesDir() {
   const dir = join(
     tmpdir(),
-    `mcp-browser-tools-${Date.now()}-${Math.random().toString(36).slice(2)}`
+    `browser-mcp-tools-${Date.now()}-${Math.random().toString(36).slice(2)}`
   );
   await mkdir(dir, { recursive: true });
   return dir;

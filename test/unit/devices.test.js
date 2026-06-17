@@ -38,7 +38,7 @@ test('getAllDevices merges user devices over builtin', async (t) => {
   const configPath = join(configDir, 'devices.json');
   t.after(async () => {
     await rm(configDir, { recursive: true, force: true });
-    delete process.env.MCP_BROWSER_TOOLS_DEVICES;
+    delete process.env.BROWSER_MCP_TOOLS_DEVICES;
   });
 
   await writeFile(
@@ -49,7 +49,7 @@ test('getAllDevices merges user devices over builtin', async (t) => {
     })
   );
 
-  process.env.MCP_BROWSER_TOOLS_DEVICES = configPath;
+  process.env.BROWSER_MCP_TOOLS_DEVICES = configPath;
 
   const all = await getAllDevices();
   assert.equal(all['iPhone 14'].width, 999);
@@ -71,10 +71,10 @@ test('loadUserDevices returns empty object when file missing', async (t) => {
   const configDir = await mkdtemp(join(tmpdir(), 'devices-missing-'));
   t.after(async () => {
     await rm(configDir, { recursive: true, force: true });
-    delete process.env.MCP_BROWSER_TOOLS_DEVICES;
+    delete process.env.BROWSER_MCP_TOOLS_DEVICES;
   });
 
-  process.env.MCP_BROWSER_TOOLS_DEVICES = join(configDir, 'missing.json');
+  process.env.BROWSER_MCP_TOOLS_DEVICES = join(configDir, 'missing.json');
   assert.deepEqual(await loadUserDevices(), {});
 });
 
@@ -84,7 +84,7 @@ test('listDevices marks source as builtin or user', async (t) => {
   const configPath = join(configDir, 'devices.json');
   t.after(async () => {
     await rm(configDir, { recursive: true, force: true });
-    delete process.env.MCP_BROWSER_TOOLS_DEVICES;
+    delete process.env.BROWSER_MCP_TOOLS_DEVICES;
   });
 
   await writeFile(
@@ -93,7 +93,7 @@ test('listDevices marks source as builtin or user', async (t) => {
       'my-phone': { width: 400, height: 540, mobile: true }
     })
   );
-  process.env.MCP_BROWSER_TOOLS_DEVICES = configPath;
+  process.env.BROWSER_MCP_TOOLS_DEVICES = configPath;
 
   const devices = await listDevices();
   const builtin = devices.find((d) => d.name === 'iPhone 14');

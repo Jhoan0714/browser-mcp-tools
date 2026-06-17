@@ -1,4 +1,4 @@
-# MCP Browser Tools
+# Browser MCP Tools
 
 MCP server for **Chrome and Edge** via **Chrome DevTools Protocol**: screen recording, full-page screenshots, and device emulation. Complements [mcp-selenium](https://github.com/angiejones/mcp-selenium).
 
@@ -15,7 +15,7 @@ MCP server for **Chrome and Edge** via **Chrome DevTools Protocol**: screen reco
   "mcpServers": {
     "browser-tools": {
       "command": "npx",
-      "args": ["-y", "mcp-browser-tools"]
+      "args": ["-y", "browser-mcp-tools@latest"]
     }
   }
 }
@@ -28,7 +28,7 @@ Local development:
   "mcpServers": {
     "browser-tools": {
       "command": "node",
-      "args": ["/path/to/mcp-browser-tools/src/server.js"]
+      "args": ["/path/to/browser-mcp-tools/src/server.js"]
     }
   }
 }
@@ -81,7 +81,7 @@ Built-in presets: iPhone 14, iPhone SE, Pixel 7, Galaxy S23, iPad.
 
 ### Custom devices
 
-Create `~/.config/mcp-browser-tools/devices.json`:
+Create `~/.config/browser-mcp-tools/devices.json`:
 
 ```json
 {
@@ -97,7 +97,7 @@ Create `~/.config/mcp-browser-tools/devices.json`:
 
 User devices override built-in presets with the same name.
 
-Override config path with env var `MCP_BROWSER_TOOLS_DEVICES`.
+Override config path with env var `BROWSER_MCP_TOOLS_DEVICES`.
 
 Device profile fields:
 

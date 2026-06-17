@@ -53,7 +53,7 @@ const server = new McpServer(
     instructions: [
       'CDP tools for Chrome and Edge: screen recording, full-page screenshots, and device emulation.',
       'Default viewport is desktop. Call emulate_device before screenshots or recording to simulate a mobile device.',
-      'User devices: ~/.config/mcp-browser-tools/devices.json',
+      'User devices: ~/.config/browser-mcp-tools/devices.json',
       'With mcp-selenium: start browser with --remote-debugging-port=9222 and --remote-allow-origins=*, then attach_auto or attach_browser.',
       'Recording workflow: attach -> start_recording -> (selenium actions) -> stop_recording -> close_session.',
       'Screenshot workflow: attach -> take_full_screenshot(outputPath: ...).',

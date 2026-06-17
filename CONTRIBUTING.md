@@ -11,8 +11,8 @@ Thank you for helping improve this project!
 ## Setup
 
 ```bash
-git clone https://github.com/jhoanlopez/mcp-browser-tools.git
-cd mcp-browser-tools
+git clone https://github.com/jhoanlopez/browser-mcp-tools.git
+cd browser-mcp-tools
 npm install
 ```
 
@@ -72,7 +72,7 @@ test/
 
 ## Custom devices for testing
 
-User devices load from `~/.config/mcp-browser-tools/devices.json` or `MCP_BROWSER_TOOLS_DEVICES`.
+User devices load from `~/.config/browser-mcp-tools/devices.json` or `BROWSER_MCP_TOOLS_DEVICES`.
 
 ## Sending a pull request
 
@@ -83,7 +83,7 @@ User devices load from `~/.config/mcp-browser-tools/devices.json` or `MCP_BROWSE
 
 ## Reporting bugs
 
-Open an issue at https://github.com/jhoanlopez/mcp-browser-tools/issues.
+Open an issue at https://github.com/jhoanlopez/browser-mcp-tools/issues.
 
 Please include:
 

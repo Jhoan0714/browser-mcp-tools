@@ -6,7 +6,7 @@ import { z } from 'zod';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BUILTIN_PATH = join(__dirname, 'devices', 'builtin.json');
-const DEFAULT_USER_PATH = join(homedir(), '.config', 'mcp-browser-tools', 'devices.json');
+const DEFAULT_USER_PATH = join(homedir(), '.config', 'browser-mcp-tools', 'devices.json');
 
 const deviceProfileSchema = z.object({
   width: z.number().int().positive(),
@@ -41,7 +41,7 @@ export async function loadBuiltinDevices() {
 }
 
 export function getUserDevicesPath() {
-  return process.env.MCP_BROWSER_TOOLS_DEVICES ?? DEFAULT_USER_PATH;
+  return process.env.BROWSER_MCP_TOOLS_DEVICES ?? DEFAULT_USER_PATH;
 }
 
 export async function loadUserDevices() {
