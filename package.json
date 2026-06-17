@@ -2,18 +2,18 @@
   "name": "browser-mcp-tools",
   "version": "0.2.0",
   "description": "MCP server for Chrome and Edge: CDP screen recording, full-page screenshots, and device emulation",
-  "author": "jhoanlopez",
+  "author": "Jhoan0714",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=18"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhoanlopez/browser-mcp-tools.git"
+    "url": "https://github.com/Jhoan0714/browser-mcp-tools.git"
   },
-  "homepage": "https://github.com/jhoanlopez/browser-mcp-tools#readme",
+  "homepage": "https://github.com/Jhoan0714/browser-mcp-tools#readme",
   "bugs": {
-    "url": "https://github.com/jhoanlopez/browser-mcp-tools/issues"
+    "url": "https://github.com/Jhoan0714/browser-mcp-tools/issues"
   },
   "files": [
     "src",

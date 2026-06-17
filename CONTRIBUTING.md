@@ -11,7 +11,7 @@ Thank you for helping improve this project!
 ## Setup
 
 ```bash
-git clone https://github.com/jhoanlopez/browser-mcp-tools.git
+git clone https://github.com/Jhoan0714/browser-mcp-tools.git
 cd browser-mcp-tools
 npm install
 ```
@@ -83,7 +83,7 @@ User devices load from `~/.config/browser-mcp-tools/devices.json` or `BROWSER_MC
 
 ## Reporting bugs
 
-Open an issue at https://github.com/jhoanlopez/browser-mcp-tools/issues.
+Open an issue at https://github.com/Jhoan0714/browser-mcp-tools/issues.
 
 Please include:
 
