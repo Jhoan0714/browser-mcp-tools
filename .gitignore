@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test & recording artifacts
+*.mp4
+*.webm
+*.png
+*.jpg
+*.jpeg
+
+# Temp & cache
+tmp/
+temp/
+.cache/
+*.tmp
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Build output
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors & local IDE config
+.idea/
+.cursor/
+.vscode/
+*.swp
+*.swo
+*~

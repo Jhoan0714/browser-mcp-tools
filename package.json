@@ -1,0 +1,87 @@
+{
+  "name": "mcp-browser-tools",
+  "version": "0.2.0",
+  "description": "MCP server for Chrome and Edge: CDP screen recording, full-page screenshots, and device emulation",
+  "author": "jhoanlopez",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhoanlopez/mcp-browser-tools.git"
+  },
+  "homepage": "https://github.com/jhoanlopez/mcp-browser-tools#readme",
+  "bugs": {
+    "url": "https://github.com/jhoanlopez/mcp-browser-tools/issues"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "src/server.js",
+  "exports": {
+    ".": "./src/recorder.js",
+    "./recorder": "./src/recorder.js",
+    "./sessions": "./src/sessions.js",
+    "./cdp-client": "./src/cdp-client.js",
+    "./video": "./src/video.js",
+    "./devices": "./src/devices.js"
+  },
+  "bin": {
+    "mcp-browser-tools": "./src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run format:check && npm test",
+    "test": "node --test test/unit/*.test.js",
+    "test:unit": "node --test test/unit/*.test.js",
+    "test:integration": "node --test test/integration/*.test.js",
+    "test:all": "node --test test/unit/*.test.js test/integration/*.test.js",
+    "test:watch": "node --test --watch test/unit/*.test.js",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "mcp",
+    "browser",
+    "recording",
+    "screencast",
+    "screenshot",
+    "device-emulation",
+    "cdp",
+    "selenium",
+    "chrome",
+    "edge",
+    "model-context-protocol"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "ffmpeg-static": "^5.2.0",
+    "ws": "^8.18.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
