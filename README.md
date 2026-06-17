@@ -85,7 +85,7 @@ Create `~/.config/mcp-browser-tools/devices.json`:
 
 ```json
 {
-  "mercado-libre-mobile": {
+  "my-iphone": {
     "width": 400,
     "height": 540,
     "deviceScaleFactor": 1,
